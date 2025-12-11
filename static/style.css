@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a0f29, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+option {
+    color: lack;
+}
+
+/* Blurred Floating Neon Circles */
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.55;
+    animation: float 8s infinite alternate ease-in-out;
+}
+
+.c1 {
+    width: 350px;
+    height: 350px;
+    background: #00aaff;
+    top: -100px;
+    left: -80px;
+}
+
+.c2 {
+    width: 300px;
+    height: 300px;
+    background: #ff0077;
+    bottom: -80px;
+    right: -80px;
+}
+
+.c3 {
+    width: 260px;
+    height: 260px;
+    background: #8900ff;
+    top: 40%;
+    right: 12%;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+/* Glass Card */
+.glass-card {
+    height: auto;
+    max-height: 80vh;
+    /* card screen ke 90% tak hi badega */
+    overflow-y: auto;
+    /* andar scroll allow karega */
+    scrollbar-width: thin;
+    /* firefox ke liye */
+    width: 470px;
+    padding: 32px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 0.9s ease-out;
+}
+.glass-card::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #e6f2ff;
+    margin-bottom: 22px;
+    font-size: 26px;
+    text-shadow: 0 0 15px rgba(0, 155, 255, 0.7);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    margin-top: 12px;
+    color: #e8e8ff;
+}
+
+label i {
+    font-size: 18px;
+    color: #66ccff;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(5px);
+    outline: none;
+    transition: 0.3s;
+}
+
+input:hover,
+select:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00bfff, #0066ff);
+    box-shadow: 0 0 12px rgba(0, 153, 255, 0.7);
+    transition: 0.4s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0088ff, #0044cc);
+    box-shadow: 0 0 18px rgba(0, 153, 255, 1);
+}
+
+.result-box {
+    margin-top: 22px;
+    padding: 15px;
+    text-align: center;
+    border-left: 5px solid #00ffaa;
+    border-radius: 12px;
+    background: rgba(0, 255, 170, 0.15);
+    backdrop-filter: blur(6px);
+    color: #d9ffee;
+    font-size: 20px;
+    animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Import Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+/* FIX: Dropdown option visibility */
+select option {
+    background-color: #1b1f2f;
+    /* dark background */
+    color: #ffffff;
+    /* white text */
+    padding: 10px;
+}
+.glass-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.glass-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+.glass-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.clear-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 80, 80, 0.2);
+    backdrop-filter: blur(5px);
+    color: #ff9e9e;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    background: rgba(255, 50, 50, 0.45);
+    color: #ffdcdc;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+}
