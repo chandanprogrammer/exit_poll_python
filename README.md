@@ -5,3 +5,5 @@
 - pip install -r requirements.txt
 - start flask app
 - python app.py
+![alt text](image.png)
+![alt text](image-1.png)
